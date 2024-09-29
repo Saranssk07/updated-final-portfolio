@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: rgb(246, 248, 250);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.image, .Contact, .Skills, .Language, .Hobbies, .Education {
+    margin-bottom: 30px;
+}
+.full{
+    width: fit-content;
+    height: fit-content;
+    max-width: 50px;
+    min-height: 100px; 
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    background-origin: padding-box;
+    background-color: darkgrey;
+    border-radius: 20px;
+   
+}
+
+.left{
+    position: initial;
+    background-color: cadetblue;
+    padding: 40px;
+    
+}
+
+.right{
+    position: initial;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    
+}
+
+.h3{
+    color: rgb(3, 0, 0);
+    text-underline-offset: initial;
+}
+
+.h2{
+    color: black;
+}
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+    }
+
+    .full {
+        grid-template-columns: 1fr; 
+        width: 100%;
+        background-color: transparent; 
+        position: relative;
+        right: 40px;
+        top: 0px;
+        /* Full width on small screens */
+    }
+
+    .left, .right {
+        padding: 15px;
+        width: 100%; /* Ensure the sections fill the screen */
+    }
+
+    .h2 {
+        font-size: 18px; /* Smaller heading font size */
+    }
+}
+
+/* Additional Responsive Styles for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .full {
+        grid-template-columns: 1fr; 
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .left, .right {
+        padding: 20px;
+        width: 100%;
+    }
+}
+
+/* Responsive Styles for Larger Screens */
+@media (min-width: 1024px) {
+    .full {
+        grid-template-columns: 1fr 2fr; /* Adjust grid for larger screens */
+        max-width: 1100px; /* Set max-width for desktops */
+        padding: 30px;
+    }
+
+    .left, .right {
+        padding: 30px;
+    }
+}
